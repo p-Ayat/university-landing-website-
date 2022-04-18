@@ -1,0 +1,17 @@
+/* Start Header */
+@media (min-width: 992px) {
+    #page-header span {
+        display: none;
+    }
+
+    #page-header ul {
+        position: static;
+        background-color: initial;
+        height: initial;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* End Header */
