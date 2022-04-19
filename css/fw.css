@@ -23,33 +23,6 @@ body {
     line-height: 1.7;
     font-family: Verdana, sans-serif;
     font-family: 'Poppins', sans-serif;
-    /* font-family: 'Open Sans', sans-serif; */
-    /* 
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    */
-}
-
-blockquote {
-    font-style: italic;
-    font-weight: 100;
-}
-
-input,
-textarea {
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    border: 0;
-}
-
-button {
-    border: 0;
 }
 
 ul {
@@ -71,81 +44,14 @@ h4 {
 /* End Global Rules */
 
 
-/* CENTERING */
-.center-position {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-حددي عرض أقل من 100% بعدين خلى مارجن من اليمين والشمال أوتو .center-margin {
-    margin: 0 auto;
-}
-
-
-.flex-row-centering {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-column-centering {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* CENTERING */
-
-
-/* Start Color Tints */
+/* Color Tint */
 :root {
-    --dark-txt: #666;
-    --light-txt: #ddd;
-
-    --red-0: #ffe6e6;
-    --red-1: #ffcccc;
-    --red-2: #ffb3b3;
-    --red-3: #ff9999;
-    --red-4: #ff8080;
-    --red-5: #ff6666;
-    --red-6: #ff4d4d;
-    --red-7: #ff3333;
     --red-8: #ff1919;
-    --red-9: #ff0000;
-    --red-10: #800000;
-
-    --orange-0: #fff2e6;
-    --orange-1: #ffe5cc;
-    --orange-2: #ffd9b3;
-
-    /* End Color Tints */
-
-    /* Start Box Shadows */
-    --sm-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 15%);
-    --md-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 15%);
-    --lg-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 15%);
-    /* inner shadow */
-    --inner-shadow: -1px -1px 2px 1px #e8e7e7 inset;
-    /* bi-clr-shadow */
-    --bi-clr-shadow: -3px -3px 10px rgb(78, 179, 78), 3px 3px 10px rgb(86, 86, 128);
-    /* End Box Shadows */
-
-    /* Start Border Radius */
-    --rounded-border: 4px 100px;
-    /* (from udacity) */
-    --circle: 50%;
 }
+/* End Color Tints */
 
 
 /* GRID ORGANIZERS, CONTAINERS AND FONT SIZES */
-
-/* Always img { width: 100%; max-width: 100% or 300px; } */
-/* put img inside div for perfect controlling */
-/* about the very small items (like: social media icons) it's enough:
-ul {display: flex; flex-wrap; wrap; justify-content: center;} */
 
 
 /*
@@ -197,32 +103,6 @@ one element per row in small devices.
     }
 }
 
-/*
-Grid quad Organizer:
-one element per row in small devices.
-2 elements per row in medium screens (media quiery: min-width: 768px...++)
-4 elements per row in large screens (media quiery: min-width: 992px...++)
-<< may you can use it for page footer! >>
-*/
-.grid-quadorg {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-content: center;
-    gap: 30px;
-}
-
-@media (min-width: 768px) {
-    .grid-quadorg {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 992px) {
-    .grid-quadorg {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
 
 .grid-biorg img,
 .grid-triorg img,
@@ -230,61 +110,6 @@ one element per row in small devices.
     width: 100%;
     max-width: 100%;
 }
-
-/*
-Grid cards Organizer: more than 2 items in row in all media quieries.. instead of sm will be once.
- */
-.grid-cards-org {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 40px 50px;
-    justify-content: center;
-    align-content: center;
-}
-
-@media (min-width: 769px) {
-    .grid-cards-org {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-
-@media (min-width: 992px) {
-    .grid-cards-org {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-}
-
-
-/* Grid Images Organizer */
-.grid-img-org {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 10px;
-    justify-content: center;
-    align-content: center;
-}
-
-@media (min-width: 768px) {
-    .grid-img-org {
-        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-    }
-}
-
-@media (min-width: 992px) {
-    .grid-img-org {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-}
-
-.grid-img-org img {
-    width: 100%;
-    max-width: 100%;
-}
-
-/*
-مهم عشان الصورة تظبط نعمل العرض 100%
-if u wanna make transform scale +1 not 0.8 , put img inside a div with overflow:hidden;
-*/
 
 
 
